@@ -1,54 +1,217 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>My Student Hub</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- GOOGLE VERIFICATION (paste your code inside here) -->
-  <meta name="google-site-verification" content="0TuFK6ai9F5RShc6UQ7KDtGLN-FlyP6Ltf-_mfKxZ2s" />
+<title>My Student Hub</title>
 
-  <style>
-    body {
-      font-family: Arial;
-      background: #0f172a;
-      color: white;
-      text-align: center;
-      padding: 40px;
-    }
+<meta name="google-site-verification" content="0TuFK6ai9F5RShc6UQ7KDtGLN-FlyP6Ltf-_mfKxZ2s" />
 
-    .box {
-      background: #1e293b;
-      padding: 20px;
-      margin: 20px auto;
-      width: 300px;
-      border-radius: 12px;
-    }
+<style>
 
-    a {
-      color: #38bdf8;
-      font-weight: bold;
-      text-decoration: none;
-    }
-  </style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#0f172a;
+color:white;
+}
+
+nav{
+background:white;
+padding:18px;
+display:flex;
+justify-content:center;
+gap:30px;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+nav a{
+text-decoration:none;
+color:#0f172a;
+font-weight:bold;
+font-size:18px;
+}
+
+.hero{
+min-height:85vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:40px;
+background:
+linear-gradient(
+135deg,
+#0f172a,
+#1e293b,
+#334155
+);
+}
+
+.hero-content{
+max-width:800px;
+}
+
+.hero h1{
+font-size:4rem;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:1.2rem;
+line-height:1.6;
+margin-bottom:35px;
+}
+
+.button{
+display:inline-block;
+padding:15px 30px;
+background:#38bdf8;
+color:white;
+text-decoration:none;
+border-radius:12px;
+font-weight:bold;
+margin:10px;
+transition:0.3s;
+}
+
+.button:hover{
+transform:translateY(-3px);
+}
+
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:25px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.card{
+background:#1e293b;
+width:320px;
+padding:25px;
+border-radius:18px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+}
+
+.card h3{
+margin-bottom:15px;
+}
+
+footer{
+background:#020617;
+padding:25px;
+text-align:center;
+margin-top:50px;
+}
+
+@media(max-width:700px){
+
+.hero h1{
+font-size:2.5rem;
+}
+
+nav{
+flex-wrap:wrap;
+}
+
+}
+
+</style>
 </head>
 
 <body>
 
-  <h1>Welcome 👋</h1>
-  <p>This website helps students learn how to use AI for studying, revision,
-    note-taking and exam preparation. It also shares legal and ethical ways
-    for teenagers to earn money through services, digital products and online opportunities.</p>
+<nav>
+<a href="index.html">Home</a>
+<a href="product.html">Products</a>
+<a href="about.html">About</a>
+</nav>
 
-  <div class="box">
-    <h2>📘 AI Study Guide</h2>
-    <p>Learn how to use AI to revise faster.</p>
-    <a href="https://pu1se.gumroad.com/l/oousnd">Get Guide</a>
-  </div>
+<section class="hero">
 
-  <div class="box">
-    <h2>💰 Teen Money Guide</h2>
-    <p>Legal ways to make money as a teen.</p>
-    <a href="https://pu1se.gumroad.com/l/gugglx">Get Guide</a>
-  </div>
+<div class="hero-content">
+
+<h1>My Student Hub</h1>
+
+<p>
+Study smarter with AI and discover ethical ways for teenagers
+to earn money through digital products, services and online opportunities.
+</p>
+
+<a href="product.html" class="button">View Products</a>
+
+<a href="about.html" class="button">About Us</a>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>Featured Guides</h2>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>📘 AI Study Guide</h3>
+
+<p>
+Learn how to use AI for revision, note taking and exam preparation.
+</p>
+
+<br>
+
+<a class="button" href="https://pu1se.gumroad.com/l/oousnd">
+Get Guide
+</a>
+
+</div>
+
+<div class="card">
+
+<h3>💰 Teen Money Guide</h3>
+
+<p>
+Discover legal and practical ways teenagers can earn money.
+</p>
+
+<br>
+
+<a class="button" href="https://pu1se.gumroad.com/l/gugglx">
+Get Guide
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© My Student Hub</p>
+
+</footer>
 
 </body>
 </html>
