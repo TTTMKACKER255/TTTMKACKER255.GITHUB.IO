@@ -3,36 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>About - My Student Hub</title>
 
 <style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
 font-family:Arial,sans-serif;
 background:#0f172a;
 color:white;
-margin:0;
 }
 
+/* NAV */
 nav{
 background:white;
 padding:18px;
-text-align:center;
+display:flex;
+justify-content:center;
+gap:30px;
+position:sticky;
+top:0;
+z-index:1000;
 }
 
 nav a{
-margin:0 15px;
 text-decoration:none;
 color:#0f172a;
 font-weight:bold;
+font-size:18px;
 }
 
+/* MAIN */
 .container{
 max-width:900px;
 margin:auto;
 padding:60px 20px;
-line-height:1.8;
 text-align:center;
 }
+
+/* SECTIONS */
+.section{
+background:#1e293b;
+padding:25px;
+border-radius:18px;
+margin:20px 0;
+border:1px solid rgba(255,255,255,0.05);
+}
+
+h1{
+margin-bottom:20px;
+font-size:2.5rem;
+}
+
+h2{
+margin-bottom:10px;
+}
+
+p{
+line-height:1.7;
+color:#cbd5e1;
+}
+
+/* QUOTE */
+.quote{
+font-style:italic;
+margin-top:10px;
+color:#94a3b8;
+}
+
+/* BUTTON */
+.button{
+display:inline-block;
+margin-top:20px;
+padding:12px 20px;
+background:#38bdf8;
+color:white;
+text-decoration:none;
+border-radius:10px;
+font-weight:bold;
+transition:0.3s;
+}
+
+.button:hover{
+background:#0ea5e9;
+transform:translateY(-3px);
+}
+
+/* MOBILE */
+@media(max-width:700px){
+nav{
+flex-wrap:wrap;
+gap:15px;
+}
+}
+
 </style>
 </head>
 
@@ -48,17 +118,61 @@ text-align:center;
 
 <h1>About My Student Hub</h1>
 
-<p>
-My Student Hub helps students study smarter and learn practical ways to earn money ethically online.
-</p>
+<div class="section">
+
+<h2>🎯 Our Mission</h2>
 
 <p>
-We focus on AI-powered studying, revision strategies, and real-world skills for teenagers.
+My Student Hub exists to help students study smarter, not harder.
+We focus on simple, effective learning strategies using AI tools,
+revision techniques, and modern study methods.
 </p>
 
-<p>
-Our goal is to make learning easier, faster, and more useful for your future.
+<p class="quote">
+“Success comes from smarter systems, not just harder work.”
 </p>
+
+</div>
+
+<div class="section">
+
+<h2>📘 What We Do</h2>
+
+<p>
+We create guides that help students improve their grades and understand
+how to build useful skills for the future. Everything is designed to be
+simple, practical, and easy to follow.
+</p>
+
+<p class="quote">
+“Small improvements every day create big results over time.”
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>💡 Why This Exists</h2>
+
+<p>
+Most students are never taught how to study effectively or how to build
+real-world skills early. This platform is here to change that.
+</p>
+
+</div>
+
+<div class="section">
+
+<h2>🚀 Get Started</h2>
+
+<p>
+If you're ready to improve your studying and learn new skills,
+check out our guides.
+</p>
+
+<a class="button" href="product.html">View Products</a>
+
+</div>
 
 </div>
 
