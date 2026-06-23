@@ -88,11 +88,29 @@ text-decoration:none;
 border-radius:10px;
 font-weight:bold;
 transition:0.3s;
+border:none;
+cursor:pointer;
 }
 
 .button:hover{
 background:#0ea5e9;
 transform:translateY(-3px);
+}
+
+/* INTERACTIVE BOX */
+.quizBox{
+margin-top:15px;
+padding:15px;
+background:#0f172a;
+border:1px solid #334155;
+border-radius:12px;
+}
+
+.hidden{
+display:none;
+margin-top:10px;
+color:#38bdf8;
+font-weight:bold;
 }
 
 /* MOBILE */
@@ -124,12 +142,12 @@ gap:15px;
 
 <p>
 My Student Hub exists to help students study smarter, not harder.
-We focus on simple, effective learning strategies using AI tools,
-revision techniques, and modern study methods.
+We focus on practical learning strategies, AI tools, and revision methods
+that actually improve academic performance.
 </p>
 
 <p class="quote">
-“Success comes from smarter systems, not just harder work.”
+“Real progress comes from smarter systems, not longer hours.”
 </p>
 
 </div>
@@ -139,13 +157,12 @@ revision techniques, and modern study methods.
 <h2>📘 What We Do</h2>
 
 <p>
-We create guides that help students improve their grades and understand
-how to build useful skills for the future. Everything is designed to be
-simple, practical, and easy to follow.
+We create simple, powerful guides that help students improve grades,
+build confidence, and develop useful real-world skills for the future.
 </p>
 
 <p class="quote">
-“Small improvements every day create big results over time.”
+“Consistency beats intensity over time.”
 </p>
 
 </div>
@@ -155,9 +172,27 @@ simple, practical, and easy to follow.
 <h2>💡 Why This Exists</h2>
 
 <p>
-Most students are never taught how to study effectively or how to build
-real-world skills early. This platform is here to change that.
+Many students are never taught how to study effectively or how to build
+skills outside of school. This platform is here to change that.
 </p>
+
+</div>
+
+<div class="section">
+
+<h2>🧠 Quick Interactive Challenge</h2>
+
+<p>Tap the button below to reveal a mindset tip:</p>
+
+<div class="quizBox">
+
+<button class="button" onclick="showTip()">Reveal Tip</button>
+
+<p id="tip" class="hidden">
+Focus on understanding, not memorising — it improves grades faster 🚀
+</p>
+
+</div>
 
 </div>
 
@@ -167,7 +202,7 @@ real-world skills early. This platform is here to change that.
 
 <p>
 If you're ready to improve your studying and learn new skills,
-check out our guides.
+explore our guides designed specifically for students like you.
 </p>
 
 <a class="button" href="product.html">View Products</a>
@@ -175,6 +210,12 @@ check out our guides.
 </div>
 
 </div>
+
+<script>
+function showTip(){
+document.getElementById("tip").style.display = "block";
+}
+</script>
 
 </body>
 </html>
