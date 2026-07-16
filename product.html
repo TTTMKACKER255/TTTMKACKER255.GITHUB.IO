@@ -4,80 +4,70 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Products - My Student Hub</title>
-
 <style>
-body{
-font-family:Arial,sans-serif;
-background:#0f172a;
-color:white;
-margin:0;
-}
-
-nav{
-background:white;
-padding:18px;
-text-align:center;
-}
-
-nav a{
-margin:0 15px;
-text-decoration:none;
-color:#0f172a;
-font-weight:bold;
-}
-
-.container{
-max-width:1000px;
-margin:auto;
-padding:50px 20px;
-text-align:center;
-}
-
-.card{
-background:#1e293b;
-padding:25px;
-border-radius:15px;
-margin:25px auto;
-max-width:500px;
-}
-
-.button{
-display:inline-block;
-padding:12px 20px;
-background:#38bdf8;
-color:white;
-text-decoration:none;
-border-radius:10px;
-font-weight:bold;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#0b1220;color:#fff}
+body:before,body:after{content:"";position:fixed;border-radius:50%;filter:blur(90px);opacity:.18;z-index:-1}
+body:before{width:280px;height:280px;background:#38bdf8;left:-60px;top:120px}
+body:after{width:340px;height:340px;background:#7c3aed;right:-90px;bottom:-80px}
+nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;padding:18px 8%}
+.logo{font-weight:bold;color:#111827;font-size:1.3rem}
+nav a{text-decoration:none;color:#111827;font-weight:bold;margin-left:20px}
+.hero{text-align:center;padding:80px 8%;background:linear-gradient(135deg,#0f172a,#172554,#1e293b)}
+.hero h1{font-size:3rem;margin-bottom:15px}
+.hero p{max-width:700px;margin:auto;color:#d1d5db;line-height:1.7}
+.container{max-width:1200px;margin:auto;padding:60px 8%}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:28px}
+.card{background:rgba(30,41,59,.88);padding:28px;border-radius:20px;border:1px solid rgba(255,255,255,.08);transition:.3s}
+.card:hover{transform:translateY(-8px)}
+.badge{display:inline-block;background:#38bdf8;color:#fff;padding:6px 12px;border-radius:999px;font-size:.8rem;margin-bottom:12px}
+ul{margin:18px 0 22px 20px;color:#cbd5e1;line-height:1.8}
+.button{display:inline-block;padding:14px 24px;background:#38bdf8;color:#fff;text-decoration:none;border-radius:12px;font-weight:bold}
+.button:hover{background:#0ea5e9}
+footer{text-align:center;padding:35px;background:#020617;color:#94a3b8;margin-top:60px}
+@media(max-width:700px){nav{flex-direction:column}.hero h1{font-size:2.3rem}}
 </style>
 </head>
-
 <body>
+<nav><div class="logo">🎓 My Student Hub</div><div><a href="index.html">Home</a><a href="product.html">Products</a><a href="about.html">About</a></div></nav>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="product.html">Products</a>
-<a href="about.html">About</a>
-</nav>
+<section class="hero">
+<h1>Student Resources</h1>
+<p>Browse our carefully designed digital guides to help you study smarter, use AI responsibly and learn practical money-making skills.</p>
+</section>
 
 <div class="container">
-
-<h1>Our Products</h1>
+<div class="grid">
 
 <div class="card">
+<span class="badge">Most Popular</span>
 <h2>📘 AI Study Guide</h2>
-<p>Learn how to use AI to revise faster and study smarter for exams.</p>
-<a class="button" href="https://pu1se.gumroad.com/l/oousnd">Get Guide</a>
+<p>Learn how to make AI work for you instead of against you.</p>
+<ul>
+<li>Revision techniques</li>
+<li>Note-making prompts</li>
+<li>Exam preparation ideas</li>
+<li>Time-saving workflows</li>
+</ul>
+<a class="button" target="_blank" href="https://pu1se.gumroad.com/l/oousnd">Get Guide</a>
 </div>
 
 <div class="card">
+<span class="badge">New</span>
 <h2>💰 Teen Money Guide</h2>
-<p>Learn ethical and legal ways to earn money as a teenager.</p>
-<a class="button" href="https://pu1se.gumroad.com/l/gugglx">Get Guide</a>
+<p>Discover ethical, realistic ways to earn money while building useful skills.</p>
+<ul>
+<li>Online opportunities</li>
+<li>Digital products</li>
+<li>Services you can offer</li>
+<li>Practical advice</li>
+</ul>
+<a class="button" target="_blank" href="https://pu1se.gumroad.com/l/gugglx">Get Guide</a>
 </div>
 
 </div>
+</div>
 
+<footer>© 2026 My Student Hub • Thanks for visiting!</footer>
 </body>
 </html>
