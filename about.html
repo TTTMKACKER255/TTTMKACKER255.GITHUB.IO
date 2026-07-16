@@ -3,219 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>About - My Student Hub</title>
-
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:Arial,sans-serif;
-background:#0f172a;
-color:white;
-}
-
-/* NAV */
-nav{
-background:white;
-padding:18px;
-display:flex;
-justify-content:center;
-gap:30px;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-nav a{
-text-decoration:none;
-color:#0f172a;
-font-weight:bold;
-font-size:18px;
-}
-
-/* MAIN */
-.container{
-max-width:900px;
-margin:auto;
-padding:60px 20px;
-text-align:center;
-}
-
-/* SECTIONS */
-.section{
-background:#1e293b;
-padding:25px;
-border-radius:18px;
-margin:20px 0;
-border:1px solid rgba(255,255,255,0.05);
-}
-
-h1{
-margin-bottom:20px;
-font-size:2.5rem;
-}
-
-h2{
-margin-bottom:10px;
-}
-
-p{
-line-height:1.7;
-color:#cbd5e1;
-}
-
-/* QUOTE */
-.quote{
-font-style:italic;
-margin-top:10px;
-color:#94a3b8;
-}
-
-/* BUTTON */
-.button{
-display:inline-block;
-margin-top:20px;
-padding:12px 20px;
-background:#38bdf8;
-color:white;
-text-decoration:none;
-border-radius:10px;
-font-weight:bold;
-transition:0.3s;
-border:none;
-cursor:pointer;
-}
-
-.button:hover{
-background:#0ea5e9;
-transform:translateY(-3px);
-}
-
-/* INTERACTIVE BOX */
-.quizBox{
-margin-top:15px;
-padding:15px;
-background:#0f172a;
-border:1px solid #334155;
-border-radius:12px;
-}
-
-.hidden{
-display:none;
-margin-top:10px;
-color:#38bdf8;
-font-weight:bold;
-}
-
-/* MOBILE */
-@media(max-width:700px){
-nav{
-flex-wrap:wrap;
-gap:15px;
-}
-}
-
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#0b1220;color:#fff}
+body:before,body:after{content:"";position:fixed;border-radius:50%;filter:blur(90px);opacity:.2;z-index:-1}
+body:before{width:300px;height:300px;background:#38bdf8;left:-80px;top:80px}
+body:after{width:360px;height:360px;background:#7c3aed;right:-100px;bottom:-100px}
+nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;padding:18px 8%}
+.logo{font-weight:bold;color:#111827;font-size:1.3rem}
+nav a{text-decoration:none;color:#111827;font-weight:bold;margin-left:20px}
+.hero{padding:90px 8%;text-align:center;background:linear-gradient(135deg,#0f172a,#172554,#1e293b)}
+.hero h1{font-size:3.2rem;margin-bottom:15px}
+.hero p{max-width:700px;margin:auto;color:#d1d5db;line-height:1.7}
+.container{max-width:1100px;margin:auto;padding:70px 8%}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:22px}
+.card{background:rgba(30,41,59,.85);padding:24px;border-radius:18px;border:1px solid rgba(255,255,255,.08);transition:.3s}
+.card:hover{transform:translateY(-8px)}
+h2{margin-bottom:10px}
+p{color:#cbd5e1;line-height:1.7}
+.button{display:inline-block;margin-top:18px;padding:14px 26px;background:#38bdf8;color:#fff;text-decoration:none;border-radius:12px;font-weight:bold;border:none;cursor:pointer}
+.button:hover{background:#0ea5e9}
+.tip{display:none;margin-top:15px;color:#38bdf8;font-weight:bold}
+footer{text-align:center;padding:35px;background:#020617;color:#94a3b8;margin-top:50px}
+@media(max-width:700px){nav{flex-direction:column}.hero h1{font-size:2.4rem}}
 </style>
 </head>
-
 <body>
-
-<nav>
-<a href="index.html">Home</a>
-<a href="product.html">Products</a>
-<a href="about.html">About</a>
-</nav>
-
-<div class="container">
-
+<nav><div class="logo">🎓 My Student Hub</div><div><a href="index.html">Home</a><a href="product.html">Products</a><a href="about.html">About</a></div></nav>
+<section class="hero">
 <h1>About My Student Hub</h1>
-
-<div class="section">
-
-<h2>🎯 Our Mission</h2>
-
-<p>
-My Student Hub exists to help students study smarter, not harder.
-We focus on practical learning strategies, AI tools, and revision methods
-that actually improve academic performance.
-</p>
-
-<p class="quote">
-“Real progress comes from smarter systems, not longer hours.”
-</p>
-
+<p>Helping students study smarter, build confidence and learn practical skills through clear guides, AI tools and ethical ways to earn money.</p>
+</section>
+<div class="container">
+<div class="grid">
+<div class="card"><h2>🎯 Our Mission</h2><p>We help students learn efficiently using practical revision techniques, AI tools and study systems that save time.</p></div>
+<div class="card"><h2>📘 What We Do</h2><p>We create straightforward digital guides designed to improve grades, confidence and useful real-world skills.</p></div>
+<div class="card"><h2>💡 Why We Exist</h2><p>Many students are never shown how to study effectively. We want to make those skills accessible to everyone.</p></div>
+<div class="card"><h2>👨‍🎓 Who It's For</h2><p>Perfect for students who want better revision, responsible AI use and practical advice for the future.</p></div>
 </div>
-
-<div class="section">
-
-<h2>📘 What We Do</h2>
-
-<p>
-We create simple, powerful guides that help students improve grades,
-build confidence, and develop useful real-world skills for the future.
-</p>
-
-<p class="quote">
-“Consistency beats intensity over time.”
-</p>
-
+<div style="margin-top:45px" class="card">
+<h2>🧠 Study Tip Generator</h2>
+<p>Click below to reveal a study mindset tip.</p>
+<button class="button" onclick="tip()">Reveal Tip</button>
+<p id="tip" class="tip"></p>
 </div>
-
-<div class="section">
-
-<h2>💡 Why This Exists</h2>
-
-<p>
-Many students are never taught how to study effectively or how to build
-skills outside of school. This platform is here to change that.
-</p>
-
-</div>
-
-<div class="section">
-
-<h2>🧠 Quick Interactive Challenge</h2>
-
-<p>Tap the button below to reveal a mindset tip:</p>
-
-<div class="quizBox">
-
-<button class="button" onclick="showTip()">Reveal Tip</button>
-
-<p id="tip" class="hidden">
-Focus on understanding, not memorising — it improves grades faster 🚀
-</p>
-
-</div>
-
-</div>
-
-<div class="section">
-
-<h2>🚀 Get Started</h2>
-
-<p>
-If you're ready to improve your studying and learn new skills,
-explore our guides designed specifically for students like you.
-</p>
-
+<div style="text-align:center;margin-top:40px">
+<h2>Ready to Get Started?</h2>
+<p>Explore our student guides and begin building better study habits today.</p>
 <a class="button" href="product.html">View Products</a>
-
 </div>
-
 </div>
-
+<footer>© 2026 My Student Hub • Learn Smarter • Grow Further</footer>
 <script>
-function showTip(){
-document.getElementById("tip").style.display = "block";
-}
+const tips=[
+"Focus on understanding before memorising.",
+"Short daily revision beats last-minute cramming.",
+"Teach someone else to test your knowledge.",
+"Take regular breaks to stay productive."
+];
+function tip(){document.getElementById("tip").style.display="block";document.getElementById("tip").textContent=tips[Math.floor(Math.random()*tips.length)];}
 </script>
-
-</body>
-</html>
+</body></html>
