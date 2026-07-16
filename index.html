@@ -3,252 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>My Student Hub | Study Smarter & Earn Online</title>
-
 <meta name="google-site-verification" content="0TuFK6ai9F5RShc6UQ7KDtGLN-FlyP6Ltf-_mfKxZ2s" />
-
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-scroll-behavior:smooth;
-}
-
-body{
-font-family:Arial,sans-serif;
-background:#0f172a;
-color:white;
-}
-
-/* NAV */
-nav{
-background:white;
-padding:18px;
-display:flex;
-justify-content:center;
-gap:30px;
-position:sticky;
-top:0;
-z-index:1000;
-}
-
-nav a{
-text-decoration:none;
-color:#0f172a;
-font-weight:bold;
-font-size:18px;
-transition:0.2s;
-}
-
-nav a:hover{
-color:#38bdf8;
-}
-
-/* HERO */
-.hero{
-min-height:85vh;
-display:flex;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:40px;
-background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
-}
-
-.hero-content{
-max-width:800px;
-}
-
-.hero h1{
-font-size:4rem;
-margin-bottom:20px;
-}
-
-.hero p{
-font-size:1.2rem;
-line-height:1.6;
-margin-bottom:35px;
-color:#cbd5e1;
-}
-
-/* BUTTONS */
-.button{
-display:inline-block;
-padding:15px 30px;
-background:#38bdf8;
-color:white;
-text-decoration:none;
-border-radius:12px;
-font-weight:bold;
-margin:10px;
-transition:0.3s;
-}
-
-.button:hover{
-transform:translateY(-4px);
-background:#0ea5e9;
-}
-
-/* SECTIONS */
-.section{
-padding:80px 20px;
-text-align:center;
-}
-
-.section h2{
-font-size:2rem;
-margin-bottom:10px;
-}
-
-.section p{
-color:#cbd5e1;
-}
-
-/* CARDS */
-.cards{
-display:flex;
-justify-content:center;
-gap:25px;
-flex-wrap:wrap;
-margin-top:40px;
-}
-
-.card{
-background:#1e293b;
-width:320px;
-padding:25px;
-border-radius:18px;
-transition:0.3s;
-border:1px solid rgba(255,255,255,0.05);
-}
-
-.card:hover{
-transform:translateY(-8px);
-border-color:#38bdf8;
-}
-
-.card h3{
-margin-bottom:15px;
-}
-
-/* FOOTER */
-footer{
-background:#020617;
-padding:25px;
-text-align:center;
-margin-top:50px;
-color:#94a3b8;
-}
-
-/* MOBILE */
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Arial,sans-serif;background:#0b1220;color:#fff;overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;border-radius:50%;filter:blur(80px);opacity:.25;z-index:-1}
+body:before{width:320px;height:320px;background:#38bdf8;left:-80px;top:120px}
+body:after{width:420px;height:420px;background:#7c3aed;right:-120px;bottom:-100px}
+nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);display:flex;justify-content:space-between;align-items:center;padding:18px 8%;z-index:99}
+.logo{font-weight:700;font-size:1.4rem;color:#111827}
+.links a{text-decoration:none;color:#111827;margin-left:24px;font-weight:bold}
+.links a:hover{color:#0ea5e9}
+.hero{min-height:92vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px;background:linear-gradient(135deg,#0f172a,#172554,#1e293b)}
+.hero h1{font-size:4rem;margin-bottom:18px}
+.hero p{max-width:700px;margin:auto;color:#d1d5db;font-size:1.15rem;line-height:1.7}
+.btn{display:inline-block;margin:18px 10px;padding:14px 28px;border-radius:12px;text-decoration:none;font-weight:bold;transition:.3s}
+.primary{background:#38bdf8;color:#fff}
+.secondary{border:2px solid #fff;color:#fff}
+.btn:hover{transform:translateY(-4px)}
+section{padding:80px 8%}
+h2{text-align:center;font-size:2.2rem;margin-bottom:10px}
+.sub{text-align:center;color:#cbd5e1;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px}
+.card{background:rgba(30,41,59,.8);backdrop-filter:blur(10px);padding:24px;border-radius:18px;border:1px solid rgba(255,255,255,.08);transition:.3s}
+.card:hover{transform:translateY(-8px)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px;text-align:center}
+.stat{background:#172033;padding:24px;border-radius:16px}
+footer{padding:40px 8%;text-align:center;background:#020617;color:#94a3b8}
 @media(max-width:700px){
-
-.hero h1{
-font-size:2.5rem;
+.hero h1{font-size:2.6rem}
+nav{flex-direction:column;gap:12px}
+.links a{margin:0 10px}
 }
-
-nav{
-flex-wrap:wrap;
-gap:15px;
-}
-
-.cards{
-flex-direction:column;
-align-items:center;
-}
-
-}
-
 </style>
 </head>
-
 <body>
-
 <nav>
+<div class="logo">🎓 My Student Hub</div>
+<div class="links">
 <a href="index.html">Home</a>
-<a href="product.html">Products</a>
+<a href="products.html">Products</a>
 <a href="about.html">About</a>
+</div>
 </nav>
 
 <section class="hero">
-
-<div class="hero-content">
-
-<h1>My Student Hub</h1>
-
-<p>
-Study smarter with AI tools and discover ethical ways for teenagers
-to earn money through digital skills, services, and online opportunities.
-</p>
-
-<a href="product.html" class="button">View Products</a>
-<a href="about.html" class="button">About Us</a>
-
+<div>
+<h1>Study Smarter. Earn Smarter.</h1>
+<p>Helping students use AI for revision and discover practical, ethical ways to earn money through digital skills and online opportunities.</p>
+<a class="btn primary" href="products.html">Explore Products</a>
+<a class="btn secondary" href="about.html">Learn More</a>
 </div>
-
 </section>
 
-<section class="section">
-
+<section>
 <h2>Featured Guides</h2>
-<p>High-value student resources designed to help you improve fast</p>
-
-<div class="cards">
-
+<p class="sub">Designed for students who want to save time and build useful skills.</p>
+<div class="grid">
 <div class="card">
-
 <h3>📘 AI Study Guide</h3>
-
-<p>
-Learn how to use AI for revision, notes, and exam preparation to improve grades faster.
-</p>
-
-<br>
-
-<a class="button" href="https://pu1se.gumroad.com/l/oousnd" target="_blank">
-Get Guide
-</a>
-
+<p>Learn AI-powered revision, note making and exam preparation techniques.</p><br>
+<a class="btn primary" target="_blank" href="https://pu1se.gumroad.com/l/oousnd">Get Guide</a>
 </div>
-
 <div class="card">
-
 <h3>💰 Teen Money Guide</h3>
-
-<p>
-Discover legal and practical ways teenagers can start earning money online.
-</p>
-
-<br>
-
-<a class="button" href="https://pu1se.gumroad.com/l/gugglx" target="_blank">
-Get Guide
-</a>
-
+<p>Discover legal, practical ways to start earning money as a teenager.</p><br>
+<a class="btn primary" target="_blank" href="https://pu1se.gumroad.com/l/gugglx">Get Guide</a>
 </div>
-
 </div>
-
 </section>
 
-<section class="section">
+<section>
+<h2>Why Choose My Student Hub?</h2>
+<div class="stats">
+<div class="stat"><h3>🤖 AI</h3><p>Smarter revision</p></div>
+<div class="stat"><h3>📚 Study</h3><p>Clear guides</p></div>
+<div class="stat"><h3>💷 Money</h3><p>Ethical ideas</p></div>
+<div class="stat"><h3>🚀 Growth</h3><p>Built for students</p></div>
+</div>
+</section>
 
-<h2>Why Students Use This</h2>
-
-<p>
-Simple guides. Real strategies. No nonsense. Built for teens who want better grades and real skills.
-</p>
-
+<section>
+<h2>Frequently Asked Questions</h2>
+<div class="grid">
+<div class="card"><h3>Who is this for?</h3><p>Students looking to improve revision and learn useful skills.</p></div>
+<div class="card"><h3>Are the guides digital?</h3><p>Yes, they're delivered through Gumroad after purchase.</p></div>
+<div class="card"><h3>Will more guides be added?</h3><p>Yes, new resources will be added over time.</p></div>
+</div>
 </section>
 
 <footer>
-
-<p>© 2026 My Student Hub — All rights reserved</p>
-
+<p>© 2026 My Student Hub • Built for students • All rights reserved.</p>
 </footer>
-
 </body>
 </html>
